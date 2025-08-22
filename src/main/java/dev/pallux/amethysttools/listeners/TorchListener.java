@@ -16,6 +16,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.block.data.Directional;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -218,9 +219,9 @@ public class TorchListener implements Listener {
                 // The torch should face the opposite direction of the solid block
                 try {
                     org.bukkit.block.data.BlockData data = block.getBlockData();
-                    if (data instanceof org.bukkit.block.data.type.WallTorch wallTorch) {
-                        wallTorch.setFacing(face.getOppositeFace());
-                        block.setBlockData(wallTorch);
+                    if (data instanceof org.bukkit.block.data.Directional directional) {
+                        directional.setFacing(face.getOppositeFace());
+                        block.setBlockData(directional);
                     }
                 } catch (Exception e) {
                     // Fallback - just place regular torch
