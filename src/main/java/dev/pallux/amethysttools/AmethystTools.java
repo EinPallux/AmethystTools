@@ -26,15 +26,17 @@ public final class AmethystTools extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        // Initialize managers
+        // Initialize managers that don't depend on config first
         configManager = new ConfigManager(this);
+        cooldownManager = new CooldownManager();
+
+        // Load configurations BEFORE initializing managers that need config
+        configManager.loadConfigs();
+
+        // Now initialize managers that depend on config
         messageManager = new MessageManager(this);
         toolManager = new ToolManager(this);
-        cooldownManager = new CooldownManager();
         economyIntegrationManager = new EconomyIntegrationManager(this);
-
-        // Load configurations
-        configManager.loadConfigs();
 
         // Setup Vault economy
         if (!setupEconomy()) {
@@ -96,6 +98,9 @@ public final class AmethystTools extends JavaPlugin {
 
     public void reload() {
         configManager.loadConfigs();
+        if (economyIntegrationManager != null) {
+            economyIntegrationManager.reload();
+        }
         getLogger().info("AmethystTools has been reloaded!");
     }
 
