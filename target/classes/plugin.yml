@@ -1,0 +1,37 @@
+name: AmethystTools
+version: '1.0.0'
+main: dev.pallux.amethysttools.AmethystTools
+api-version: '1.21'
+author: Pallux
+description: Recreation of DonutSMP's Amethyst Tools
+website: https://github.com/Pallux
+
+depend:
+  - Vault
+
+softdepend:
+  - EconomyShopGUI
+  - ShopGUIPlus
+
+commands:
+  atools:
+    description: Main command for AmethystTools
+    usage: /<command> <give|reload|destroy|help>
+    aliases: [amethysttools, at]
+
+permissions:
+  atools.op:
+    description: Access to all AmethystTools commands
+    default: op
+  atools.uuid:
+    description: See item UUIDs in lore
+    default: op
+  atools.give:
+    description: Give AmethystTools items
+    default: op
+  atools.reload:
+    description: Reload the plugin
+    default: op
+  atools.destroy:
+    description: Destroy AmethystTools items by UUID
+    default: op

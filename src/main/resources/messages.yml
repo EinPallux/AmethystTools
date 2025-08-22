@@ -1,0 +1,83 @@
+# AmethystTools Messages Configuration
+# Author: Pallux
+# Use hex colors with &#rrggbb& format
+
+# Plugin Prefix
+prefix: "&#9d4edd&[&#c77dff&AmethystTools&#9d4edd&]"
+
+# General Messages
+general:
+  no-permission: "{prefix} &#ff6b6b&You don't have permission to use this command!"
+  player-not-found: "{prefix} &#ff6b6b&Player not found!"
+  invalid-item: "{prefix} &#ff6b6b&Invalid item type!"
+  reload-success: "{prefix} &#4ecdc4&Configuration reloaded successfully!"
+  plugin-info: |
+    &#9d4edd&▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+                        &#c77dff&AmethystTools v1.0.0
+                           &#e0aaff&by Pallux
+    &#9d4edd&▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+# Command Messages
+commands:
+  help:
+    header: "&#9d4edd&▬▬▬▬▬▬▬▬▬▬▬▬▬ &#c77dff&AmethystTools Commands &#9d4edd&▬▬▬▬▬▬▬▬▬▬▬▬▬"
+    give: "&#e0aaff&/atools give <player> <item> &#8b5cf6&- Give AmethystTools items"
+    reload: "&#e0aaff&/atools reload &#8b5cf6&- Reload the plugin configuration"
+    destroy: "&#e0aaff&/atools destroy <uuid> &#8b5cf6&- Destroy an item by UUID"
+    help: "&#e0aaff&/atools help &#8b5cf6&- Show this help menu"
+    footer: "&#9d4edd&▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"
+
+  give:
+    success: "{prefix} &#4ecdc4&Successfully gave {item} to {player}!"
+    inventory-full: "{prefix} &#ff6b6b&{player}'s inventory is full!"
+    received: "{prefix} &#4ecdc4&You received {item}!"
+
+  destroy:
+    success: "{prefix} &#4ecdc4&Successfully destroyed item with UUID: {uuid}"
+    not-found: "{prefix} &#ff6b6b&No item found with UUID: {uuid}"
+    invalid-uuid: "{prefix} &#ff6b6b&Invalid UUID format!"
+
+# Tool Messages
+tools:
+  tree-chopper:
+    success: "{prefix} &#4ecdc4&Tree chopped successfully!"
+    no-tree: "{prefix} &#ff6b6b&No tree found to chop!"
+
+  sell-axe:
+    success: "{prefix} &#4ecdc4&Sold items for &#ffd93d&${amount}!"
+    no-items: "{prefix} &#ff6b6b&No valuable items found in chest!"
+    no-economy: "{prefix} &#ff6b6b&Economy system not available!"
+
+  pickaxe:
+    success: "{prefix} &#4ecdc4&Mined {blocks} blocks!"
+    blacklisted: "{prefix} &#ff6b6b&Cannot break protected blocks!"
+
+  bucket:
+    success: "{prefix} &#4ecdc4&Drained {amount} water blocks!"
+    no-water: "{prefix} &#ff6b6b&No water found to drain!"
+
+  torch:
+    success: "{prefix} &#4ecdc4&Torch placed!"
+    cooldown: "{prefix} &#ff6b6b&You must wait {time} seconds before placing another torch!"
+    invalid-location: "{prefix} &#ff6b6b&Cannot place torch here!"
+
+  rocket:
+    success: "{prefix} &#4ecdc4&Rocket launched!"
+    cooldown: "{prefix} &#ff6b6b&You must wait {time} seconds before using another rocket!"
+    not-flying: "{prefix} &#ff6b6b&You must be flying with elytra to use this rocket!"
+
+# Timer Messages
+timer:
+  warning-1h: "{prefix} &#ffa726&Your {tool} will self-destruct in 1 hour!"
+  warning-10m: "{prefix} &#ff7043&Your {tool} will self-destruct in 10 minutes!"
+  warning-1m: "{prefix} &#f44336&Your {tool} will self-destruct in 1 minute!"
+  destroyed: "{prefix} &#f44336&Your {tool} has self-destructed!"
+
+# Item Names (for messages)
+item-names:
+  tree-chopper: "&#9d4edd&Amethyst Tree Chopper"
+  sell-axe: "&#9d4edd&Amethyst Sell Axe"
+  pickaxe: "&#9d4edd&Amethyst Pickaxe"
+  bucket: "&#9d4edd&Amethyst Bucket"
+  torch: "&#9d4edd&Amethyst Torch"
+  rocket: "&#9d4edd&Amethyst Rocket"

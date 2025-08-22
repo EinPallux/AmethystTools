@@ -1,0 +1,107 @@
+# AmethystTools Configuration
+# Author: Pallux
+# Version: 1.0.0
+
+# General Settings
+general:
+  # Time before tools self-destruct (in days)
+  tool-lifetime: 7
+  # Enable debug mode
+  debug: false
+
+# Economy Integration Settings
+economy:
+  # Available options: EconomyShopGUI, ShopGUIPlus, Vault
+  integration: "EconomyShopGUI"
+
+# Tool Settings
+tools:
+  # Amethyst Tree Chopper
+  tree-chopper:
+    enabled: true
+    name: "&#9d4edd&Amethyst Tree Chopper"
+    lore:
+      - "&#c77dff&✦ Instantly chops down entire trees"
+      - "&#e0aaff&⚡ Magical efficiency enchanted"
+      - ""
+      - "&#8b5cf6&Self Destruct: {time}"
+      - "&#6366f1&UUID: {uuid}"
+
+  # Amethyst Sell Axe
+  sell-axe:
+    enabled: true
+    name: "&#9d4edd&Amethyst Sell Axe"
+    lore:
+      - "&#c77dff&✦ Instantly sells chest contents"
+      - "&#e0aaff&⚡ Magical efficiency enchanted"
+      - ""
+      - "&#8b5cf6&Self Destruct: {time}"
+      - "&#6366f1&UUID: {uuid}"
+
+  # Amethyst Pickaxe
+  pickaxe:
+    enabled: true
+    name: "&#9d4edd&Amethyst Pickaxe"
+    lore:
+      - "&#c77dff&✦ Mines in 3x3x3 area"
+      - "&#e0aaff&⚡ Magical efficiency enchanted"
+      - ""
+      - "&#8b5cf6&Self Destruct: {time}"
+      - "&#6366f1&UUID: {uuid}"
+    # Blocks that cannot be broken
+    blacklisted-blocks:
+      - "END_PORTAL_FRAME"
+      - "BARRIER"
+      - "BEDROCK"
+      - "COMMAND_BLOCK"
+      - "CHAIN_COMMAND_BLOCK"
+      - "REPEATING_COMMAND_BLOCK"
+      - "STRUCTURE_BLOCK"
+      - "JIGSAW"
+      - "SPAWNER"
+
+  # Amethyst Bucket
+  bucket:
+    enabled: true
+    name: "&#9d4edd&Amethyst Bucket"
+    lore:
+      - "&#c77dff&✦ Drains {amount} water blocks at once"
+      - "&#e0aaff&⚡ Magical efficiency enchanted"
+      - ""
+      - "&#8b5cf6&Self Destruct: {time}"
+      - "&#6366f1&UUID: {uuid}"
+    # Amount of water to drain
+    drain-amount: 27
+
+  # Amethyst Torch
+  torch:
+    enabled: true
+    name: "&#9d4edd&Amethyst Torch"
+    lore:
+      - "&#c77dff&✦ Places endless torches"
+      - "&#e0aaff&⚡ 5 second cooldown"
+      - ""
+      - "&#8b5cf6&Self Destruct: {time}"
+      - "&#6366f1&UUID: {uuid}"
+    # Cooldown in seconds
+    cooldown: 5
+
+  # Amethyst Rocket
+  rocket:
+    enabled: true
+    name: "&#9d4edd&Amethyst Rocket"
+    lore:
+      - "&#c77dff&✦ Endless firework rocket"
+      - "&#e0aaff&⚡ 2 second cooldown"
+      - ""
+      - "&#8b5cf6&Self Destruct: {time}"
+      - "&#6366f1&UUID: {uuid}"
+    # Cooldown in seconds
+    cooldown: 2
+
+# Advanced Settings
+advanced:
+  # Save tool data interval (in seconds)
+  save-interval: 300
+  # Maximum tools per player
+  max-tools-per-player: 10
